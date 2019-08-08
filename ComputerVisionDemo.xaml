@@ -1,0 +1,269 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="ComputerVisionDemo" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="508.8,627.2" sap2010:WorkflowViewState.IdRef="ComputerVisionDemo_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.CV</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.Cryptography</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Python</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="ComputerVisionDemo" sap:VirtualizedContainerService.HintSize="468.8,507.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <p:CVScope ContinueOnError="{x:Null}" ApiKey="uF96WWhsoBVO1//9PMsWc3oIv4Iw8Vx6G0pMpOmBXHsfDoWKMTRWmK93EMQ7/IK7" DelayBefore="300" DisplayName="CV Screen Scope 'chrome.exe Chrome'" sap:VirtualizedContainerService.HintSize="430.4,414.4" sap2010:WorkflowViewState.IdRef="CVScope_1" Server="https://cv.uipath.com">
+      <p:CVScope.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <p:CvTypeIntoWithDescriptor DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: Text 'Congratulations to entire' (163,384,318,25)&quot; +&#xD;&#xA;&quot;Anchor: Text 'Proud moment for In&amp;a' (164,463,293,25)&quot; +&#xD;&#xA;&quot;Anchor: Image (164,438,140,11)&quot;]" DesignTimeScaleFactor="1.25" DisplayName="CV Type Into - Text" EmptyField="False" sap:VirtualizedContainerService.HintSize="400,135.2" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_1" InformativeScreenshot="a36e72a3f9e8b28db3e45b88d13b4a6d" Text="[&quot;Anything&quot;]" TimeoutMS="30000">
+              <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
+                <uc:CvDescriptor>
+                  <uc:CvDescriptor.Anchors>
+                    <x:Array Type="uc:CvElementDescriptor">
+                      <uc:CvElementDescriptor DesignTimeArea="164, 463, 293, 25" ElementType="Text" Text="Proud moment for In&amp;a" />
+                      <uc:CvElementDescriptor DesignTimeArea="164, 438, 140, 11" ElementType="Image" ImageBase64="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" />
+                    </x:Array>
+                  </uc:CvDescriptor.Anchors>
+                  <uc:CvDescriptor.Target>
+                    <uc:CvElementDescriptor DesignTimeArea="163, 384, 318, 25" ElementType="Text" Text="Congratulations to entire" />
+                  </uc:CvDescriptor.Target>
+                </uc:CvDescriptor>
+              </p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
+              <p:CvTypeIntoWithDescriptor.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+              </p:CvTypeIntoWithDescriptor.Target>
+            </p:CvTypeIntoWithDescriptor>
+          </Sequence>
+        </ActivityAction>
+      </p:CVScope.Body>
+      <p:CVScope.DesignTimeCache>
+        <uc:CVCache ScreenshotGuid="{x:Null}" InformativeScreenshot="d80395f13bcd6cf7cbfd15d4e990d1b2" LogicalPosition="0, 88" OcrText="3&#xD;&#xA;Chandrayaan-2 hours ago launches.&#xD;&#xA;team@isro Congratulations&#xD;&#xA;Proud carries&#xD;&#xA;Kartik a dream&#xD;&#xA;S ehzndaee&#xD;&#xA;moment&#xD;&#xA;#Chandrayaan2&#xD;&#xA;x a&#xD;&#xA;Chandrayaan-2&#xD;&#xA;for&#xD;&#xA;422 &quot;SRO day&#xD;&#xA;to&#xD;&#xA;- Images In&amp;a&#xD;&#xA;#GSLVMklll entire&#xD;&#xA;may launch:&#xD;&#xA;be subject Countdown&#xD;&#xA;to copyright. for _ Find out more 15&#xD;&#xA;]SRO hours&#xD;&#xA;Chandrayaan ago 2 Launch&#xD;&#xA;6 hows ago 7&#xD;&#xA;Chandrayaan murs Get The Chandrayaan&#xD;&#xA;chandrayaan&#xD;&#xA;launch&#xD;&#xA;Related ago&#xD;&#xA;help Visit&#xD;&#xA;CYAMNAYAA Indian 2&#xD;&#xA;LAUNCH [ive&#xD;&#xA;- images: Launch&#xD;&#xA;Send Express&#xD;&#xA;2,&#xD;&#xA;Q&#xD;&#xA;feedback jsro LIVE&#xD;&#xA;Add chandrayaan&#xD;&#xA;to Strealnjng&#xD;&#xA;2: Collections Here&#xD;&#xA;2, chandrayaan is how&#xD;&#xA;h 5&#xD;&#xA;'SRO&#xD;&#xA;&lt; tx:wrs&#xD;&#xA;Share&#xD;&#xA;is-hcw-india-reacted-to-spacecraft-injecti... Chandra&#xD;&#xA;India&#xD;&#xA;2 launch, y -an&#xD;&#xA;reacted&#xD;&#xA;chandrayaan 2 launch: Chandraym&#xD;&#xA;2" Position="0, 88" ScaleFactor="1.25" ServerVersion="1">
+          <uc:CVCache.CvUiElements>
+            <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="64">
+              <uc:CvElementInfo Category="Button" Confidence="DesignTime" Region="1072, 347, 72, 32" Score="1" />
+              <uc:CvElementInfo Category="Button" Confidence="DesignTime" Region="1240, 346, 68, 32" Score="1" />
+              <uc:CvElementInfo Category="Button" Confidence="DesignTime" Region="1004, 346, 58, 32" Score="1" />
+              <uc:CvElementInfo Category="Button" Confidence="DesignTime" Region="1153, 347, 79, 32" Score="1" />
+              <uc:CvElementInfo Category="ArrowButton" Confidence="DesignTime" Region="1519, 0, 16, 16" Score="1" />
+              <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="1251, 355, 16, 16" Score="1" />
+              <uc:CvElementInfo Category="CloseButton" Confidence="DesignTime" Region="1472, 178, 31, 29" Score="1" />
+              <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="1081, 355, 13, 15" Score="1" />
+              <uc:CvElementInfo Category="ArrowButton" Confidence="DesignTime" Region="1495, 440, 20, 26" Score="1" />
+              <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="1012, 355, 15, 15" Score="1" />
+              <uc:CvElementInfo Category="ArrowButton" Confidence="DesignTime" Region="4, 440, 22, 28" Score="1" />
+              <uc:CvElementInfo Category="Button" Confidence="DesignTime" Region="827, 8, 30, 16" Score="1" />
+              <uc:CvElementInfo Category="ArrowButton" Confidence="DesignTime" Region="1520, 776, 15, 13" Score="1" />
+              <uc:CvElementInfo Category="Button" Confidence="DesignTime" Region="806, 625, 68, 20" Score="1" />
+              <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="246, 499, 236, 30" Score="1" />
+              <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1495, 440, 20, 30" Score="1" />
+              <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="4, 441, 24, 27" Score="1" />
+              <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1472, 176, 32, 30" Score="1" />
+              <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="247, 499, 237, 31" Score="1" />
+              <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="176, 339, 24, 27" Score="1" />
+              <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1519, 775, 16, 14" Score="1" />
+              <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="387, 596, 203, 44" Score="1" />
+              <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="756, 763, 7, 8" Score="1" />
+              <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="1228, 758, 34, 12" Score="1" />
+              <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="828, 8, 28, 16" Score="1" />
+              <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1524, 0, 11, 485" Score="1" />
+              <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1535, 0, 0, 732" Score="1" />
+              <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="764, 763, 8, 8" Score="1" />
+              <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="754, 764, 6, 7" Score="1" />
+              <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="246, 498, 241, 30" Score="1" />
+              <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="1471, 177, 32, 31" Score="1" />
+              <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1346, 444, 11, 8" Score="1" />
+              <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1521, 32, 12, 299" Score="1" />
+              <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="1471, 177, 32, 30" Score="1" />
+              <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="0, 415, 30, 83" Score="1" />
+              <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="1516, 7, 16, 248" Score="1" />
+              <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1530, 0, 5, 792" Score="1" />
+              <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="806, 626, 68, 20" Score="1" />
+              <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1235, 758, 24, 12" Score="1" />
+              <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="827, 8, 32, 16" Score="1" />
+              <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="842, 399, 147, 51" Score="1" />
+              <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="24, 759, 16, 12" Score="1" />
+              <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="1535, 0, 0, 721" Score="1" />
+              <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="1521, 40, 12, 277" Score="1" />
+              <uc:CvElementInfo Category="MinimizeButton" Confidence="Runtime" Region="1472, 177, 30, 32" Score="1" />
+            </scg:List>
+          </uc:CVCache.CvUiElements>
+          <uc:CVCache.OcrTexts>
+            <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="128">
+              <uc:OcrTextInfo Region="28, 83, 6, 8" Text="3" />
+              <uc:OcrTextInfo Region="28, 106, 84, 11" Text="Chandrayaan-2" />
+              <uc:OcrTextInfo Region="37, 83, 27, 8" Text="hours" />
+              <uc:OcrTextInfo Region="68, 84, 18, 8" Text="ago" />
+              <uc:OcrTextInfo Region="117, 106, 51, 9" Text="launches." />
+              <uc:OcrTextInfo Region="162, 425, 142, 28" Text="team@isro" />
+              <uc:OcrTextInfo Region="163, 384, 203, 31" Text="Congratulations" />
+              <uc:OcrTextInfo Region="164, 463, 75, 25" Text="Proud" />
+              <uc:OcrTextInfo Region="174, 106, 36, 8" Text="carries" />
+              <uc:OcrTextInfo Region="205, 344, 24, 7" Text="Kartik" />
+              <uc:OcrTextInfo Region="215, 108, 5, 6" Text="a" />
+              <uc:OcrTextInfo Region="225, 106, 33, 8" Text="dream" />
+              <uc:OcrTextInfo Region="234, 344, 4, 7" Text="S" />
+              <uc:OcrTextInfo Region="242, 344, 43, 8" Text="ehzndaee" />
+              <uc:OcrTextInfo Region="244, 467, 106, 21" Text="moment" />
+              <uc:OcrTextInfo Region="259, 506, 99, 15" Text="#Chandrayaan2" />
+              <uc:OcrTextInfo Region="349, 671, 4, 5" Text="x" />
+              <uc:OcrTextInfo Region="352, 84, 6, 6" Text="a" />
+              <uc:OcrTextInfo Region="352, 106, 84, 11" Text="Chandrayaan-2" />
+              <uc:OcrTextInfo Region="354, 463, 36, 25" Text="for" />
+              <uc:OcrTextInfo Region="359, 669, 18, 8" Text="422" />
+              <uc:OcrTextInfo Region="360, 506, 38, 12" Text="&quot;SRO" />
+              <uc:OcrTextInfo Region="361, 83, 17, 10" Text="day" />
+              <uc:OcrTextInfo Region="370, 388, 26, 20" Text="to" />
+              <uc:OcrTextInfo Region="384, 675, 3, 0" Text="-" />
+              <uc:OcrTextInfo Region="393, 669, 38, 11" Text="Images" />
+              <uc:OcrTextInfo Region="396, 463, 61, 25" Text="In&amp;a" />
+              <uc:OcrTextInfo Region="402, 506, 72, 12" Text="#GSLVMklll" />
+              <uc:OcrTextInfo Region="403, 385, 78, 24" Text="entire" />
+              <uc:OcrTextInfo Region="436, 672, 21, 8" Text="may" />
+              <uc:OcrTextInfo Region="441, 106, 38, 8" Text="launch:" />
+              <uc:OcrTextInfo Region="462, 669, 12, 8" Text="be" />
+              <uc:OcrTextInfo Region="478, 669, 37, 11" Text="subject" />
+              <uc:OcrTextInfo Region="485, 106, 60, 8" Text="Countdown" />
+              <uc:OcrTextInfo Region="519, 669, 9, 8" Text="to" />
+              <uc:OcrTextInfo Region="533, 669, 50, 11" Text="copyright." />
+              <uc:OcrTextInfo Region="551, 106, 13, 8" Text="for" />
+              <uc:OcrTextInfo Region="569, 114, 1, 0" Text="_" />
+              <uc:OcrTextInfo Region="589, 669, 20, 8" Text="Find" />
+              <uc:OcrTextInfo Region="615, 670, 16, 8" Text="out" />
+              <uc:OcrTextInfo Region="636, 672, 25, 6" Text="more" />
+              <uc:OcrTextInfo Region="676, 83, 11, 8" Text="15" />
+              <uc:OcrTextInfo Region="676, 106, 28, 8" Text="]SRO" />
+              <uc:OcrTextInfo Region="692, 83, 27, 8" Text="hours" />
+              <uc:OcrTextInfo Region="710, 106, 72, 11" Text="Chandrayaan" />
+              <uc:OcrTextInfo Region="722, 84, 17, 8" Text="ago" />
+              <uc:OcrTextInfo Region="788, 106, 5, 8" Text="2" />
+              <uc:OcrTextInfo Region="799, 106, 38, 8" Text="Launch" />
+              <uc:OcrTextInfo Region="811, 632, 6, 8" Text="6" />
+              <uc:OcrTextInfo Region="820, 632, 27, 8" Text="hows" />
+              <uc:OcrTextInfo Region="851, 633, 18, 8" Text="ago" />
+              <uc:OcrTextInfo Region="964, 83, 6, 8" Text="7" />
+              <uc:OcrTextInfo Region="964, 106, 72, 11" Text="Chandrayaan" />
+              <uc:OcrTextInfo Region="973, 83, 27, 8" Text="murs" />
+              <uc:OcrTextInfo Region="1001, 718, 16, 8" Text="Get" />
+              <uc:OcrTextInfo Region="1002, 280, 21, 9" Text="The" />
+              <uc:OcrTextInfo Region="1003, 256, 130, 20" Text="Chandrayaan" />
+              <uc:OcrTextInfo Region="1003, 302, 72, 12" Text="chandrayaan" />
+              <uc:OcrTextInfo Region="1003, 318, 36, 9" Text="launch" />
+              <uc:OcrTextInfo Region="1003, 423, 42, 9" Text="Related" />
+              <uc:OcrTextInfo Region="1004, 84, 18, 8" Text="ago" />
+              <uc:OcrTextInfo Region="1022, 718, 20, 10" Text="help" />
+              <uc:OcrTextInfo Region="1028, 358, 24, 8" Text="Visit" />
+              <uc:OcrTextInfo Region="1028, 463, 56, 7" Text="CYAMNAYAA" />
+              <uc:OcrTextInfo Region="1029, 280, 32, 9" Text="Indian" />
+              <uc:OcrTextInfo Region="1042, 106, 5, 8" Text="2" />
+              <uc:OcrTextInfo Region="1043, 474, 40, 8" Text="LAUNCH" />
+              <uc:OcrTextInfo Region="1044, 318, 17, 9" Text="[ive" />
+              <uc:OcrTextInfo Region="1048, 723, 3, 0" Text="-" />
+              <uc:OcrTextInfo Region="1051, 423, 44, 12" Text="images:" />
+              <uc:OcrTextInfo Region="1053, 106, 38, 8" Text="Launch" />
+              <uc:OcrTextInfo Region="1056, 718, 24, 8" Text="Send" />
+              <uc:OcrTextInfo Region="1068, 280, 45, 12" Text="Express" />
+              <uc:OcrTextInfo Region="1080, 302, 9, 12" Text="2," />
+              <uc:OcrTextInfo Region="1082, 357, 8, 10" Text="Q" />
+              <uc:OcrTextInfo Region="1085, 718, 44, 8" Text="feedback" />
+              <uc:OcrTextInfo Region="1096, 302, 20, 9" Text="jsro" />
+              <uc:OcrTextInfo Region="1097, 106, 24, 8" Text="LIVE" />
+              <uc:OcrTextInfo Region="1097, 358, 20, 8" Text="Add" />
+              <uc:OcrTextInfo Region="1120, 302, 73, 12" Text="chandrayaan" />
+              <uc:OcrTextInfo Region="1121, 358, 10, 8" Text="to" />
+              <uc:OcrTextInfo Region="1127, 106, 55, 11" Text="Strealnjng" />
+              <uc:OcrTextInfo Region="1140, 256, 16, 16" Text="2:" />
+              <uc:OcrTextInfo Region="1161, 358, 58, 8" Text="Collections" />
+              <uc:OcrTextInfo Region="1166, 256, 45, 16" Text="Here" />
+              <uc:OcrTextInfo Region="1199, 302, 8, 12" Text="2," />
+              <uc:OcrTextInfo Region="1213, 302, 73, 12" Text="chandrayaan" />
+              <uc:OcrTextInfo Region="1220, 256, 14, 16" Text="is" />
+              <uc:OcrTextInfo Region="1241, 256, 40, 16" Text="how" />
+              <uc:OcrTextInfo Region="1247, 776, 4, 8" Text="h" />
+              <uc:OcrTextInfo Region="1248, 83, 6, 8" Text="5" />
+              <uc:OcrTextInfo Region="1248, 106, 28, 8" Text="'SRO" />
+              <uc:OcrTextInfo Region="1250, 357, 10, 11" Text="&lt;" />
+              <uc:OcrTextInfo Region="1257, 83, 27, 8" Text="tx:wrs" />
+              <uc:OcrTextInfo Region="1267, 358, 29, 8" Text="Share" />
+              <uc:OcrTextInfo Region="1275, 776, 228, 11" Text="is-hcw-india-reacted-to-spacecraft-injecti..." />
+              <uc:OcrTextInfo Region="1282, 106, 45, 8" Text="Chandra" />
+              <uc:OcrTextInfo Region="1288, 256, 45, 16" Text="India" />
+              <uc:OcrTextInfo Region="1292, 302, 6, 9" Text="2" />
+              <uc:OcrTextInfo Region="1304, 302, 39, 12" Text="launch," />
+              <uc:OcrTextInfo Region="1329, 108, 4, 8" Text="y" />
+              <uc:OcrTextInfo Region="1336, 108, 19, 6" Text="-an" />
+              <uc:OcrTextInfo Region="1341, 256, 71, 16" Text="reacted" />
+              <uc:OcrTextInfo Region="1348, 302, 73, 12" Text="chandrayaan" />
+              <uc:OcrTextInfo Region="1360, 106, 5, 8" Text="2" />
+              <uc:OcrTextInfo Region="1370, 106, 38, 8" Text="launch:" />
+              <uc:OcrTextInfo Region="1414, 106, 61, 11" Text="Chandraym" />
+              <uc:OcrTextInfo Region="1427, 302, 6, 9" Text="2" />
+            </scg:List>
+          </uc:CVCache.OcrTexts>
+        </uc:CVCache>
+      </p:CVScope.DesignTimeCache>
+      <p:CVScope.OCREngine>
+        <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
+          <ActivityFunc.Argument>
+            <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+          </ActivityFunc.Argument>
+          <ui:MicrosoftOCR FilterRegion="{x:Null}" Output="{x:Null}" Text="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="216,22.4" sap2010:WorkflowViewState.IdRef="MicrosoftOCR_1" Image="[Image]" Language="en" Profile="Screen" Scale="1" />
+        </ActivityFunc>
+      </p:CVScope.OCREngine>
+      <p:CVScope.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="4af04401832b1023bc059a2a275831a4" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='isro chandrayaan 2 launch images - Google Search - Google Chrome' /&gt;&lt;wnd aaname='Horizontal' cls='Chrome_RenderWidgetHostHWND' title='Chrome Legacy Window' /&gt;" WaitForReady="INTERACTIVE" />
+      </p:CVScope.Target>
+    </p:CVScope>
+  </Sequence>
+</Activity>

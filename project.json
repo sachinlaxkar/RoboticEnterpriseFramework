@@ -3,28 +3,42 @@
   "description": "Robotic Enterprise Framework",
   "main": "Main.xaml",
   "dependencies": {
-    "DocumentFormat.OpenXml": "[2.5.0]",
+    "BalaReva.Excel.Activities": "[2019.1.1]",
+    "Capgemini.Pipefy.Activities": "[2.0.0]",
+    "CloudRail.Google.Drive.Api": "[1.0.7]",
+    "Connector.Salesforce.Activities": "[1.1.0]",
+    "DocumentFormat.OpenXml": "[2.9.1]",
+    "OpenWeatherMap.Activities": "[1.0.3]",
     "OutlookActivities": "[1.1.1]",
+    "System.Management.Automation": "[6.1.7601.17515]",
     "UiPath": "19.7.7128.27029",
+    "Uipath.Bitmap.SketchActivities": "[1.0.0]",
     "UiPath.ComputerVision.Activities": "2.0.0",
     "UiPath.Credentials.Activities": "[1.1.6479.13204]",
-    "UiPath.Cryptography.Activities": "1.0.6863.32236",
+    "UiPath.Cryptography.Activities": "1.0.7053.27728",
     "UiPath.Excel.Activities": "2.6.2",
+    "UiPath.FTP.Activities": "[1.0.7053.27728]",
     "UiPath.Mail.Activities": "1.5.1",
     "UiPath.OCR.Contracts": "2.0.0",
-    "UiPath.PDF.Activities": "2.0.0",
+    "UiPath.PDF.Activities": "2.1.0",
     "UiPath.Python.Activities": "1.1.6863.33404",
+    "UiPath.Script.Activities": "[1.0.6710.16240]",
     "UiPath.System.Activities": "19.7.0",
     "UiPath.UIAutomation.Activities": "19.7.0",
     "UiPath.Vision": "1.6.1",
     "UiPath.Word.Activities": "1.3.2",
+    "UiPathTeam.File.Activities": "[1.0.4]",
+    "UiPathTeam.FileConverter.Activities": "[0.0.6814.35837]",
+    "UiPathTeam.GoogleSpreadsheet.Activities": "[1.0.2.1]",
     "UiPathTeam.PDF.Extensions.Activities": "[2.3.0]",
-    "UiPathTeam.XLExcel.Activities": "[1.0.6814.30102]"
+    "UiPathTeam.TwoStepAuthentication.Activities": "[1.0.0.2]",
+    "UiPathTeam.XLExcel.Activities": "[1.0.6814.30102]",
+    "UiPathTeam.XPathWebScrape.Activities": "[1.0.1]"
   },
   "webServices": [],
   "schemaVersion": "4.0",
   "studioVersion": "19.7.0.0",
-  "projectVersion": "1.0.1",
+  "projectVersion": "1.0.2-alpha.1",
   "runtimeOptions": {
     "autoDispose": false,
     "isPausable": true,
@@ -43,6 +57,17 @@
       "includeOriginalXaml": false,
       "privateWorkflows": []
     }
+  },
+  "arguments": {
+    "input": [
+      {
+        "name": "OrchestratorQueueName",
+        "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+        "required": false,
+        "hasDefault": false
+      }
+    ],
+    "output": []
   },
   "expressionLanguage": "VisualBasic"
 }
