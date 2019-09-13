@@ -54,7 +54,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:StartProcess Arguments="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Open 'mspaint.exe Untitled'" FileName="C:\WINDOWS\system32\mspaint.exe" sap:VirtualizedContainerService.HintSize="453.6,88" sap2010:WorkflowViewState.IdRef="StartProcess_1" />
-    <s:UipathGetBmpImagePixels BmpImagePath="C:\Users\sachin\Desktop\Demo.bmp" CoordinatesTable="[pixTabel]" DisplayName="Uipath get bmp image pixels" sap:VirtualizedContainerService.HintSize="453.6,22.4" sap2010:WorkflowViewState.IdRef="UipathGetBmpImagePixels_1" />
+    <s:UipathGetBmpImagePixels BmpImagePath="C:\Users\sachin\Desktop\UI Path\Demo.bmp" CoordinatesTable="[pixTabel]" DisplayName="Uipath get bmp image pixels" sap:VirtualizedContainerService.HintSize="453.6,22.4" sap2010:WorkflowViewState.IdRef="UipathGetBmpImagePixels_1" />
     <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[pixTabel]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="453.6,651.2" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
@@ -93,7 +93,7 @@
                   <ui:CursorPosition OffsetX="[Xval]" OffsetY="[Yval]" Position="TopLeft" />
                 </ui:Click.CursorPosition>
                 <ui:Click.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="f238b57ce976efda3a5f1b58610316ee" Selector="&lt;wnd app='mspaint.exe' cls='MSPaintApp' title='Untitled - Paint' /&gt;&lt;wnd cls='Afx:*' idx='1' /&gt;" WaitForReady="INTERACTIVE" />
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="6e2a7814099e8815f355394dd2c299e4" Selector="&lt;wnd app='mspaint.exe' cls='MSPaintApp' title='Untitled - Paint' /&gt;&lt;wnd cls='Afx:*' idx='1' /&gt;" WaitForReady="INTERACTIVE" />
                 </ui:Click.Target>
               </ui:Click>
             </Sequence>

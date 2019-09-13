@@ -1,0 +1,157 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Edureka_HandsOn" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="627.2,2012" sap2010:WorkflowViewState.IdRef="Edureka_HandsOn_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="21">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="16">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Edureka_HandsOn" sap:VirtualizedContainerService.HintSize="587.2,1932" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="number" />
+      <Variable x:TypeArguments="x:Int32" Default="0" Name="val" />
+      <Variable x:TypeArguments="sd:DataTable" Name="ExtractDtable" />
+      <Variable x:TypeArguments="ui:GenericValue" Name="Email" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="548.8,92.8" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Enter the number of customer" Title="Enter details">
+      <ui:InputDialog.Result>
+        <OutArgument x:TypeArguments="x:String">[number]</OutArgument>
+      </ui:InputDialog.Result>
+    </ui:InputDialog>
+    <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="548.8,92.8" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Please enter the email address" Title="Email">
+      <ui:InputDialog.Result>
+        <OutArgument x:TypeArguments="ui:GenericValue">[Email]</OutArgument>
+      </ui:InputDialog.Result>
+    </ui:InputDialog>
+    <ui:BuildDataTable DataTable="[ExtractDtable]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="548.8,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Name_x0020_&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Phone&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Bday&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+    <ui:OpenBrowser UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" Hidden="False" sap:VirtualizedContainerService.HintSize="548.8,1159.2" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="True" Private="False" Url="https://www.fakenamegenerator.com/">
+      <ui:OpenBrowser.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="518.4,1059.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <DoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="480,966.4" sap2010:WorkflowViewState.IdRef="DoWhile_1" Condition="[val&lt;Cint(number)]">
+              <Sequence sap:VirtualizedContainerService.HintSize="368.8,804" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="x:String" Name="name" />
+                  <Variable x:TypeArguments="ui:GenericValue" Name="phone" />
+                  <Variable x:TypeArguments="ui:GenericValue" Name="Bday" />
+                </Sequence.Variables>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Assign sap:VirtualizedContainerService.HintSize="330.4,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:Int32">[val]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:Int32">[val+1]</InArgument>
+                  </Assign.Value>
+                </Assign>
+                <ui:GetFullText DisplayName="Get Full Text 'H3'" sap:VirtualizedContainerService.HintSize="330.4,107.2" sap2010:WorkflowViewState.IdRef="GetFullText_1" IgnoreHidden="False">
+                  <ui:GetFullText.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="56e700bcd257b97e7129e16ba4944de9" Selector="&lt;webctrl idx='1' tag='H3' /&gt;" WaitForReady="INTERACTIVE" />
+                  </ui:GetFullText.Target>
+                  <ui:GetFullText.Text>
+                    <OutArgument x:TypeArguments="x:String">[name]</OutArgument>
+                  </ui:GetFullText.Text>
+                </ui:GetFullText>
+                <ui:GetFullText DisplayName="Get Full Text 'DD'" sap:VirtualizedContainerService.HintSize="330.4,107.2" sap2010:WorkflowViewState.IdRef="GetFullText_2" IgnoreHidden="False">
+                  <ui:GetFullText.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="131f24d0cfb0343f565d55e0f0943ace" Selector="&lt;webctrl idx='2' isleaf='1' tag='DD' /&gt;" WaitForReady="INTERACTIVE" />
+                  </ui:GetFullText.Target>
+                  <ui:GetFullText.Text>
+                    <OutArgument x:TypeArguments="ui:GenericValue">[phone]</OutArgument>
+                  </ui:GetFullText.Text>
+                </ui:GetFullText>
+                <ui:GetFullText DisplayName="Get Full Text 'DD'" sap:VirtualizedContainerService.HintSize="330.4,107.2" sap2010:WorkflowViewState.IdRef="GetFullText_3" IgnoreHidden="False">
+                  <ui:GetFullText.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="447f4f17953913333dd2fa8d7c6efaf1" Selector="&lt;webctrl idx='4' isleaf='1' tag='DD' /&gt;" WaitForReady="INTERACTIVE" />
+                  </ui:GetFullText.Target>
+                  <ui:GetFullText.Text>
+                    <OutArgument x:TypeArguments="ui:GenericValue">[Bday]</OutArgument>
+                  </ui:GetFullText.Text>
+                </ui:GetFullText>
+                <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{name,phone,Bday}]" DataTable="[ExtractDtable]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="330.4,22.4" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  genbtn'" sap:VirtualizedContainerService.HintSize="330.4,107.2" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                  <ui:Click.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:Click.CursorPosition>
+                  <ui:Click.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="978f4fe25be83803a9039c1a7ec986fd" Selector="&lt;webctrl id='genbtn' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
+                  </ui:Click.Target>
+                </ui:Click>
+              </Sequence>
+            </DoWhile>
+          </Sequence>
+        </ActivityAction>
+      </ui:OpenBrowser.Body>
+    </ui:OpenBrowser>
+    <ui:WriteCsvFile Encoding="{x:Null}" AddHeaders="True" DataTable="[ExtractDtable]" Delimitator="Comma" DisplayName="Write CSV" FilePath="C:\Users\sachin\Desktop\ExtractedData.csv" sap:VirtualizedContainerService.HintSize="548.8,88" sap2010:WorkflowViewState.IdRef="WriteCsvFile_1" />
+    <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" TimeoutMS="{x:Null}" Body="PFA" DisplayName="Send SMTP Mail Message" Email="sachin.laxkar@indexnine.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="548.8,146.4" sap2010:WorkflowViewState.IdRef="SendMail_1" IsBodyHtml="False" Password="Sachin@123" Port="587" SecureConnection="Auto" Server="smtp.gmail.com" Subject="Extract Date" To="[Email]">
+      <ui:SendMail.Files>
+        <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+          <InArgument x:TypeArguments="x:String">C:\Users\sachin\Desktop\ExtractedData.csv</InArgument>
+        </scg:List>
+      </ui:SendMail.Files>
+    </ui:SendMail>
+  </Sequence>
+</Activity>

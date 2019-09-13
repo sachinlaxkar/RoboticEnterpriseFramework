@@ -59,7 +59,7 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'Amazoncom Page'" sap:VirtualizedContainerService.HintSize="430.4,347.2" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="260fd894cd46b11710031e22ba0e0ee8" Selector="&lt;html app='chrome.exe' title='Amazon.com: books best sellers' /&gt;">
+      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'Amazoncom Page'" sap:VirtualizedContainerService.HintSize="430.4,347.2" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="4480a991563ca75557ea08f7254c133b" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Amazon.com: Online Shopping for Electronics, Apparel, Computers,*' /&gt;&lt;wnd aaname='Horizontal' cls='Chrome_RenderWidgetHostHWND' title='Chrome Legacy Window' /&gt;">
         <ui:BrowserScope.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
